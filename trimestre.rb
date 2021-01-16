@@ -14,35 +14,35 @@ ventas= {
 }
 
 
-x = ventas.values
-x = x.each_slice(3).to_a
+filter_ventas = ventas.values
+filter_ventas = filter_ventas.each_slice(3).to_a
 
-y1 = 0
-y2 = 0
-y3 = 0
-y4 = 0
+suma1 = 0
+suma2 = 0
+suma3 = 0
+suma4 = 0
 
 
-    x[0].each do |num|
-        y1 += num
+    filter_ventas[0].each do |num|
+        suma1 += num
     end
-    x[1].each do |num|
-        y2 += num
-    end
-
-    x[2].each do |num|
-        y3 += num
+    filter_ventas[1].each do |num|
+        suma2 += num
     end
 
-    x[3].each do |num|
-        y4 += num
+    filter_ventas[2].each do |num|
+        suma3 += num
+    end
+
+    filter_ventas[3].each do |num|
+        suma4 += num
     end
 
 
     trimestre = {
-        Q1: y1, 
-        Q2: y2, 
-        Q3: y3, 
-        Q4: y4
+        Q1: suma1, 
+        Q2: suma2, 
+        Q3: suma3, 
+        Q4: suma4
     }
 puts trimestre
